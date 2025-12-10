@@ -1,5 +1,5 @@
 import React from "react";
-import icon from "../assets/icon.png";
+import icon from "../assets/face.png";
 import CrossText from "./CrossText";
 import Typewriter from "typewriter-effect";
 import { useGSAP } from "@gsap/react";
