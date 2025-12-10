@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import LaptopImg from "../assets/Laptop.png"
-import tabimage1 from "../assets/Rectangle.png"
+import Frontend from "../assets/Frontend.png"
+import FullStack from "../assets/FullStack.png"
 import { BsArrowDownRightCircleFill } from "react-icons/bs";
 // import { BsArrowUpDownCircleFill } from "react-icons/bs";
 const LastestProject = () => {
     const [activeTab, setActiveTab] = useState(1);
 
     const tab = [
-        { id: 1, title: "Frontend Development", img: tabimage1 },
-        { id: 2, title: "Backend Development", img: tabimage1 },
-        { id: 3, title: "Full Stack Development", img: tabimage1 },
+        { id: 1, title: "Frontend Development", img: Frontend },
+        { id: 2, title: "Full Stack Development", img: FullStack },
     ]
     return (
-        <div className='w-[70rem] mx-auto text-white my-20'>
+        <div className='w-[70rem] mx-auto text-white mt-20'>
             <div className='flex items-center justify-center'>
                 <h1 className='text-center text-6xl pb-10'>Latest Project</h1>
                 <img src={LaptopImg} className='relative right-2 bg-transparent' alt="" />
@@ -50,6 +50,9 @@ const LastestProject = () => {
                     </div>
                 ))}
 
+            </div>
+            <div className='flex justify-center items-center'>
+                <p className='text-center bg-white/10 px-10 py-2 cursor-pointer rounded-full hover:bg-white shadow-white hover:text-black duration-150 translate-x-[-2]'>View All</p>
             </div>
         </div>
     )

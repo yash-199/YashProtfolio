@@ -25,7 +25,7 @@ const Services = () => {
     );
 
     return (
-        <div className="w-[70rem] mx-auto text-white">
+        <div className="w-[70rem] mx-auto text-white animate-fadeUp">
             <div className="flex gap-20">
 
                 {/* Left Heading Area */}

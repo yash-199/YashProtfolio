@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowForward } from "react-icons/io";
 import { BsFillFileEarmarkRichtextFill } from "react-icons/bs";
@@ -63,22 +62,7 @@ const Process = () => {
     ];
 
 
-    const [openTab, setOpenTab] = useState("01")
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setOpenTab((prevTab => {
-                const currentIndex = tab.findIndex(item => item.id === prevTab);
-                const nextIndex = (currentIndex + 1) % tab.length;
-                return tab[nextIndex].id;
-            }))
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [])
-
-    const toogleTab = (id) => {
-        setOpenTab(openTab === id ? null : id)
-    }
     return (
         <div>
             <p className='text-xl text-center text-gray-500'>My Process</p>
@@ -87,12 +71,18 @@ const Process = () => {
                 A structured approach to delivering exceptional results for your project.
             </p>
             <div className='w-[70rem] mx-auto my-10'>
-                <div className='grid grid-cols-2 text-white'>
-                    <div className='mx-10'>
+                <div className=' text-white'>
+                    <div className='mx-10 grid grid-cols-2 gap-10 '>
                         {tab.map((item, index) => (
                             <div key={index}>
-                                <div className='cursor-pointer border-white border-2 p-5 my-5 rounded-lg'>
-                                    <p className='text-white' onClick={() => toogleTab(item.id)}>
+                                <div className='cursor-pointer  bg-white/10 backdrop-blur-xl p-5 rounded-2xl shadow-lg 
+          shadow-black/40
+          border border-white/10
+          hover:shadow-white/20 
+          hover:bg-white/15
+          transition-all 
+          duration-300 border-white my-5'>
+                                    <p className='text-white p-2'>
                                         <div className='flex items-center gap-5'>
                                             <div className='bg-white rounded-lg flex items-center justify-center w-12 h-12 text-white'>
                                                 <p className='rounded text-4xl'>{item.icon}</p>
@@ -105,9 +95,8 @@ const Process = () => {
                                     </p>
                                     <div className={`
             overflow-hidden transition-all duration-500 ease-in-out
-            ${openTab === item.id ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}
         `}>
-                                        <p className='pt-4 text-md text-gray-400'>{item.desc}</p>
+                                        <p className='p-4 text-md text-gray-400'>{item.desc}</p>
                                         <ul className='list-disc ml-5 my-2 '>
                                             <li className='flex items-center gap-2'><IoIosArrowForward /> {item.list1}</li>
                                             <li className='flex items-center gap-2'><IoIosArrowForward /> {item.list2}</li>
@@ -119,18 +108,6 @@ const Process = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                    <div>
-                        {tab.map((item, index) =>
-                            openTab === item.id && (
-                                <img
-                                    key={index}
-                                    src={item.img}
-                                    alt="process image"
-                                    className="w-full h-auto"
-                                />
-                            )
-                        )}
                     </div>
                 </div>
             </div >

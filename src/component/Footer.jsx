@@ -3,7 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import logo from "../assets/logo.png";
-
+import { FaWhatsapp } from "react-icons/fa6";
 const Footer = () => {
     return (
         <section className="max-w-[80rem] mx-auto text-white py-20">
@@ -91,6 +91,17 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
+            <div className="fixed w-full right-0 bottom-0 flex justify-end pr-10 cursor-pointer bg-transparent">
+                <a href="https://wa.me/919873472655?text=Hello%21%20Thank%20you%20for%20reaching%20out.%20How%20can%20I%20help%20you%20today%20regarding%20your%20project%20or%20job%20requirement%3F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div className="bg-green-500 p-2 rounded-full mb-4 shadow-lg hover:scale-110 transition-transform duration-300">
+                        <FaWhatsapp className="text-4xl text-white bg-transparent" />
+                    </div>
+                </a>
+            </div>
+
         </section>
     );
 };
