@@ -1,5 +1,5 @@
 import React from "react";
-import icon from "../assets/face.png";
+import face from "../assets/face.png";
 import CrossText from "./CrossText";
 import Typewriter from "typewriter-effect";
 import { useGSAP } from "@gsap/react";
@@ -164,7 +164,7 @@ const HeroSection = () => {
           </p>
 
           <div className="hero-icon flex items-center justify-center relative bg-transparent">
-            <img src={icon} alt="" className="w-1/6 bg-transparent" />
+            <img src={face} alt="" className="w-1/6 bg-transparent" />
           </div>
 
           <div className="hero-info flex items-center justify-around text-white relative -top-[10rem] bg-transparent px-20 z-0">
