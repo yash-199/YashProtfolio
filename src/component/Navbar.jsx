@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="flex justify-between bg-transparent items-center px-10">
         <img src={logo} className='w-[80px] bg-transparent' alt="" />
 
-        <a href={Resume} target="_blank" className='outline-none' download target="_blank" rel="noopener noreferrer">
+        <a href={Resume} target="_blank" className='outline-none' rel="noopener noreferrer">
           <p className="text-lg bg-transparent">Resume</p>
         </a>
       </div>
