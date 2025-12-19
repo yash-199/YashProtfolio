@@ -11,8 +11,8 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row justify-between items-start gap-10">
 
                 {/* Heading */}
-                <div className="w-full md:w-[70%] space-y-4">
-                    <h1 className="text-[6rem] md:text-[8rem] font-extrabold leading-[0.8]">
+                <div className="w-full md:w-[70%] space-y-4 px-4">
+                    <h1 className="lg:text-[6rem] md:text-[8rem] text-[2rem] font-extrabold leading-[0.8]">
                         Follow Me
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-300">
@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="fixed w-full right-0 bottom-0 flex justify-end pr-10 cursor-pointer bg-transparent">
-                <a href="https://wa.me/919873472655?text=Hello%21%20Thank%20you%20for%20reaching%20out.%20How%20can%20I%20help%20you%20today%20regarding%20your%20project%20or%20job%20requirement%3F"
+                <a className="bg-transparent" href="https://wa.me/919873472655?text=Hello%21%20Thank%20you%20for%20reaching%20out.%20How%20can%20I%20help%20you%20today%20regarding%20your%20project%20or%20job%20requirement%3F"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

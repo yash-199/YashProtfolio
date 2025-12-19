@@ -70,9 +70,9 @@ const Process = () => {
             <p className='text-gray-500 text-lg text-center py-2'>
                 A structured approach to delivering exceptional results for your project.
             </p>
-            <div className='w-[70rem] mx-auto my-10'>
+            <div className='lg:w-[70rem] mx-auto my-10'>
                 <div className=' text-white'>
-                    <div className='mx-10 grid grid-cols-2 gap-10 '>
+                    <div className='mx-10 grid lg:grid-cols-2 sm:grid-cols-1 gap-10 '>
                         {tab.map((item, index) => (
                             <div key={index}>
                                 <div className='cursor-pointer  bg-white/10 backdrop-blur-xl p-5 rounded-2xl shadow-lg 

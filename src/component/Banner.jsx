@@ -2,7 +2,7 @@ import React from 'react'
 import Video from "../assets/promo.mp4"
 const Banner = () => {
     return (
-        <section className='w-[70rem] mx-auto rounded-lg  bg-gradient-to-br from-[#1a1a2e] via-[#1a103d] to-[#0f0f1a] text-white flex items-center justify-center px-10 py-10 my-20'>
+        <section className='lg:w-[70rem] mx-auto rounded-lg  bg-gradient-to-br from-[#1a1a2e] via-[#1a103d] to-[#0f0f1a] text-white lg:flex items-center justify-center px-10 py-10 my-20'>
             <div className='max-w-7xl w-full flex flex-col lg:flex-row items-center gap-16 bg-transparent'>
                 {/* Left content */}
                 <div className='flex-1 bg-transparent'>

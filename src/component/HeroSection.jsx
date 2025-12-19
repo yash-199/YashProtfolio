@@ -155,26 +155,32 @@ const HeroSection = () => {
 
         <div className="overflow-hidden bg-transparent z-[-10]">
 
-          <h1 className="hero-title bg-transparent text-white 2xl:text-[8.5rem] md:text-[6.5rem] text-[3.5rem] font-bold uppercase leading-[9vw] tracking-[-.35rem] 2xl:mb-0 ">
+          <h1 className="hero-title bg-transparent text-white 2xl:text-[8.5rem] md:text-[6.5rem] text-[2.5rem] font-bold uppercase  2xl:mb-0 ">
             Yash Kumar Jha
           </h1>
 
-          <p className="hero-subtitle text-white text-7xl relative bg-transparent z-10">
+          <p className="hero-subtitle text-white lg:text-7xl text-2xl relative bg-transparent z-10">
             Frontend & <span className="bg-transparent">Mern Stack</span> Developer
           </p>
 
-          <div className="hero-icon flex items-center justify-center relative bg-transparent">
+          <div className="hero-icon lg:flex items-center justify-center relative bg-transparent">
             <img src={face} alt="" className="w-1/6 bg-transparent" />
           </div>
 
-          <div className="hero-info flex items-center justify-around text-white relative -top-[10rem] bg-transparent px-20 z-0">
-            <p className="text-4xl font-normal bg-transparent">Frontend Developer</p>
-            <p className="text-4xl font-normal bg-transparent">Based in Delhi/NCR, India.</p>
+          <div className="hero-info lg:flex items-center justify-around text-white relative lg:-top-[10rem] -top-[4rem] bg-transparent lg:px-20 px-10 z-0">
+            <p className="lg:text-4xl text-xl font-normal bg-transparent">Frontend Developer</p>
+            <p className="lg:text-4xl text-xl font-normal bg-transparent">Based in Delhi/NCR, India.</p>
           </div>
 
-          <div className="hero-buttons flex items-center justify-around relative -top-[8rem] bg-transparent px-20">
-            <p className="text-3xl bg-white text-black rounded-full px-6 py-4 font-light">Get In Touch</p>
-            <p className="text-3xl bg-white text-black rounded-full px-16 py-4 font-light">Hire Me</p>
+          <div className="hero-buttons lg:flex items-center justify-around relative lg:-top-[8rem] -top-[3rem] bg-transparent px-20">
+            <p className="lg:text-3xl bg-white text-black rounded-full px-6 py-4 font-light">
+              <a className="bg-white text-black" href="https://wa.me/919873472655?text=Hello%21%20Thank%20you%20for%20reaching%20out.%20How%20can%20I%20help%20you%20today%20regarding%20your%20project%20or%20job%20requirement%3F">
+              Get In Touch
+              </a></p>
+            <p className="lg:text-3xl bg-white text-black rounded-full lg:px-16 py-4 mt-2 font-light">
+               <a className="bg-white text-black" href="https://wa.me/919873472655?text=Hello%21%20Thank%20you%20for%20reaching%20out.%20How%20can%20I%20help%20you%20today%20regarding%20your%20project%20or%20job%20requirement%3F">
+              Hire Me
+              </a></p>
           </div>
         </div>
       </div>
