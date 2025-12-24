@@ -11,7 +11,7 @@ import Bootstrap from "../assets/Bootstrap.jpg";
 import JavaScript from "../assets/JavaScript.png";
 import Tailwind from "../assets/Tailwind.png";
 import ReactImg from "../assets/React.png";
-import Next from "../assets/nextjs.png";
+import Next from "../assets/Nextjs.png";
 import Redux from "../assets/Redux.png";
 import WordPress from "../assets/WordPress.png";
 import Nodejs from "../assets/Nodejs.png";
@@ -54,11 +54,7 @@ const CharacterV3: React.FC<CharacterProps> = ({
     [distance * 30, 0, distance * -30]
   );
 
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [0.9, 1, 0.9]
-  );
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
 
   return (
     <motion.div
