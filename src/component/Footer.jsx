@@ -4,7 +4,22 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import { FaWhatsapp } from "react-icons/fa6";
+
 const Footer = () => {
+    const socialLinks = [
+        {
+            icon: FaInstagram,
+            url: "https://www.instagram.com/we.codedeveloper?igsh=bXZqcWlwZTQ1Mjc3",
+        },
+        {
+            icon: IoLogoGithub,
+            url: "https://github.com/yash-199/",
+        },
+        {
+            icon: FaLinkedin,
+            url: "https://www.linkedin.com/in/yashkumarjha-dev/",
+        },
+    ];
     return (
         <section className="max-w-[80rem] mx-auto text-white py-20">
             {/* Top Section */}
@@ -22,11 +37,16 @@ const Footer = () => {
 
                 {/* Social Icons */}
                 <div className="flex w-full md:w-[30%] justify-center items-center gap-6 md:gap-10">
-                    {[FaInstagram, IoLogoGithub, FaLinkedin].map((Icon, i) => (
-                        <Icon
+                    {socialLinks.map(({ icon: Icon, url }, i) => (
+                        <a
                             key={i}
-                            className="text-5xl md:text-6xl cursor-pointer border border-white/40 p-3 rounded-xl hover:bg-white hover:text-black transition duration-200"
-                        />
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="social link"
+                        >
+                            <Icon className="text-5xl md:text-6xl cursor-pointer border border-white/40 p-3 rounded-xl hover:bg-white hover:text-black transition duration-200" />
+                        </a>
                     ))}
                 </div>
             </div>
@@ -78,7 +98,9 @@ const Footer = () => {
 
                 {/* Button */}
                 <button className="bg-white/10 px-8 py-3 rounded-full hover:bg-white hover:text-black transition duration-200">
-                    Get In Touch
+                    <a href="https://wa.me/919873472655?text=Hello%21%20Thank%20you%20for%20reaching%20out.%20How%20can%20I%20help%20you%20today%20regarding%20your%20project%20or%20job%20requirement%3F" className="bg-transparent">
+                        Get In Touch
+                    </a>
                 </button>
 
                 {/* Bottom Text */}
