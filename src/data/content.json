@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "firstName": "Yash",
+    "fullName": "Yash Kumar Jha",
+    "role": "Frontend Engineer",
+    "location": "Delhi/NCR, India",
+    "experienceLabel": "3+ yrs experience",
+    "available": true,
+    "availabilityText": "Available for opportunities",
+    "resume": "asset:resume",
+    "portrait": "asset:portrait"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Yash.",
+    "line1": "Frontend",
+    "line2": "Engineer",
+    "tagline": "I build modern, scalable and high-performance web applications.",
+    "craftPrefix": "I craft",
+    "rotatingWords": [
+      "pixel-perfect interfaces",
+      "scalable architectures",
+      "blazing-fast web apps",
+      "reusable components",
+      "accessible experiences"
+    ],
+    "intro": "Frontend Engineer with 3+ years of experience crafting fast, accessible and reusable interfaces with React, Next.js, TypeScript and Redux — from analytics dashboards to booking platforms used every day.",
+    "codeStack": ["React", "Next.js", "TS"],
+    "codeState": "Redux Toolkit + RTK Query",
+    "codeFocus": "Core Web Vitals",
+    "loaderText": "Crafting interfaces"
+  },
+  "marqueeWords": ["Responsive", "Scalable", "Interactive", "Accessible", "Performant", "Type-safe", "Reliable", "Engaging"],
+  "about": {
+    "eyebrow": "About me",
+    "title": "Engineering interfaces",
+    "accent": "that feel effortless.",
+    "paragraphs": [
+      "I'm Yash — a Frontend Engineer based in Delhi/NCR. I started as an intern at All Friends Studio in 2022 and today I build web platforms at Asian Hospital, where my work sits between clean UI, solid APIs and measurable performance.",
+      "I care about the details users feel but rarely notice: a page that loads under three seconds, a dashboard that stays smooth with 50K+ records, a form that just works on every device."
+    ],
+    "stats": [
+      { "id": "s1", "value": 3, "suffix": "+", "label": "Years building for the web" },
+      { "id": "s2", "value": 50, "suffix": "K+", "label": "Records in a dashboard I shipped" },
+      { "id": "s3", "value": 60, "suffix": "%", "label": "Faster reporting for onWork.ai" },
+      { "id": "s4", "value": 150, "suffix": "+", "label": "Daily bookings on Asian Labs" }
+    ],
+    "philosophy": [
+      { "id": "p1", "icon": "gauge", "title": "Performance is a feature", "text": "Lazy loading, code splitting, lean payloads and Core Web Vitals aren't afterthoughts — they're part of the definition of done." },
+      { "id": "p2", "icon": "layers", "title": "Components over pages", "text": "Component-driven architecture helped teams I worked with ship 25% faster. Reusable, well-typed building blocks scale better than one-off screens." },
+      { "id": "p3", "icon": "users", "title": "Users first, always", "text": "Responsive, accessible and SEO-friendly by default — because a beautiful UI that some people can't use isn't finished." }
+    ],
+    "builds": [
+      { "id": "b1", "icon": "dashboard", "title": "Product UIs & dashboards", "text": "Data-heavy React interfaces with charts, pagination and real-time feel." },
+      { "id": "b2", "icon": "boxes", "title": "Full-stack MERN apps", "text": "Booking, auth and payments flows with Node.js, Express and MongoDB." },
+      { "id": "b3", "icon": "layers", "title": "Component libraries", "text": "Mobile-first, reusable UI kits like ReactWind with 10+ components." },
+      { "id": "b4", "icon": "globe", "title": "Marketing & CMS sites", "text": "Fast, SEO-tuned WordPress and multilingual corporate websites." }
+    ],
+    "approach": [
+      { "id": "a1", "title": "Understand", "text": "Break the problem down: users, data flow, edge cases and the constraints that actually matter." },
+      { "id": "a2", "title": "Architect", "text": "Design state, component boundaries and API contracts before writing UI — Redux Toolkit, RTK Query and custom hooks where they earn their place." },
+      { "id": "a3", "title": "Build", "text": "Ship small, typed, reusable pieces. Keep them testable with Jest and React Testing Library." },
+      { "id": "a4", "title": "Measure", "text": "Profile with Lighthouse and DevTools, fix bottlenecks, and verify the improvement with real numbers." }
+    ]
+  },
+  "skills": {
+    "eyebrow": "Technical skills",
+    "title": "A toolkit tuned for",
+    "accent": "scale & speed.",
+    "lead": "The languages, frameworks and practices I use every day to ship fast, reliable and maintainable frontends.",
+    "core": [
+      { "id": "js", "icon": "js", "name": "JavaScript", "detail": "ES6+", "note": "Modern syntax, async patterns & the DOM", "color": "#f7df1e", "wide": false },
+      { "id": "ts", "icon": "ts", "name": "TypeScript", "detail": "Type-safe", "note": "Typed components, props & API models", "color": "#3178c6", "wide": false },
+      { "id": "react", "icon": "react", "name": "React.js", "detail": "Hooks · Context", "note": "Reusable, composable UI architecture", "color": "#61dafb", "wide": true },
+      { "id": "next", "icon": "next", "name": "Next.js", "detail": "SSR · SEO", "note": "Server rendering & SEO-friendly apps", "color": "#ffffff", "wide": true },
+      { "id": "redux", "icon": "redux", "name": "Redux Toolkit", "detail": "State", "note": "Predictable global state at scale", "color": "#a37ff0", "wide": false },
+      { "id": "rtk", "icon": "redux", "name": "RTK Query", "detail": "Data fetching", "note": "Caching, invalidation & server state", "color": "#8b5cf6", "wide": false },
+      { "id": "html", "icon": "html", "name": "HTML5", "detail": "Semantic", "note": "Accessible, semantic markup", "color": "#e34f26", "wide": false },
+      { "id": "css", "icon": "css", "name": "CSS3", "detail": "Layout · Motion", "note": "Flexbox, Grid, Tailwind & animation", "color": "#2965f1", "wide": false }
+    ],
+    "additional": [
+      { "id": "api", "icon": "plug", "name": "API Integration" },
+      { "id": "hooks", "icon": "workflow", "name": "Custom Hooks" },
+      { "id": "perf", "icon": "gauge", "name": "Performance Optimization" },
+      { "id": "responsive", "icon": "responsive", "name": "Responsive Design" },
+      { "id": "jest", "icon": "flask", "name": "Jest" },
+      { "id": "rtl", "icon": "testtube", "name": "React Testing Library" },
+      { "id": "git", "icon": "git", "name": "Git & GitHub" },
+      { "id": "arch", "icon": "network", "name": "Frontend Architecture" }
+    ],
+    "toolkitTitle": "Also in my toolkit",
+    "toolkit": ["Tailwind CSS", "Bootstrap", "Node.js", "Express.js", "MongoDB", "MySQL", "REST APIs", "JWT", "GitHub Actions", "Postman", "Lighthouse", "WordPress", "SEO"]
+  },
+  "projects": {
+    "eyebrow": "Featured projects",
+    "title": "Selected work,",
+    "accent": "built to ship.",
+    "allReposLabel": "All repositories on GitHub",
+    "items": [
+      {
+        "id": "curaconnect",
+        "name": "CuraConnect",
+        "kind": "Medical Appointment App",
+        "description": "A doctor booking system with specialty-wise search, a scalable backend and secure authentication.",
+        "image": "asset:curaconnect",
+        "imageAlt": "CuraConnect home page with a 'Book appointment with trusted doctors' hero",
+        "imagePosition": "left top",
+        "preview": "",
+        "tech": ["React", "Node.js", "Express", "MongoDB"],
+        "features": ["Specialty-wise doctor search", "Appointment booking flow", "Secure authentication", "Scalable REST backend"],
+        "liveUrl": "",
+        "githubUrl": "https://github.com/yash-199/CuraConnect-Front-and-Backend",
+        "githubLabel": "",
+        "accent": "#6366f1"
+      },
+      {
+        "id": "tomato",
+        "name": "Tomato Delivery",
+        "kind": "Food Ordering App",
+        "description": "A MERN food ordering platform with cart, order summary and Stripe-powered checkout. Frontend deployed on Netlify, backend on Render.",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "",
+        "preview": "tomato",
+        "tech": ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+        "features": ["Cart & order summary", "Stripe checkout integration", "Netlify + Render deployment"],
+        "liveUrl": "",
+        "githubUrl": "https://github.com/yash-199/Tomato-Delivery",
+        "githubLabel": "",
+        "accent": "#ff5a3c"
+      },
+      {
+        "id": "reactwind",
+        "name": "ReactWind",
+        "kind": "UI Component Library",
+        "description": "A React + Tailwind UI library — 10+ reusable, mobile-first components including accordions, tabs and forms.",
+        "image": "",
+        "imageAlt": "",
+        "imagePosition": "",
+        "preview": "reactwind",
+        "tech": ["React", "Tailwind CSS"],
+        "features": ["10+ reusable components", "Mobile-first design", "Accordions, tabs & forms"],
+        "liveUrl": "",
+        "githubUrl": "https://github.com/yash-199/ReactWind",
+        "githubLabel": "",
+        "accent": "#38bdf8"
+      },
+      {
+        "id": "spylt",
+        "name": "Spylt",
+        "kind": "Product Landing Page",
+        "description": "A bold, typography-led product landing page — featured in the Frontend Development showcase of my previous portfolio.",
+        "image": "asset:spylt",
+        "imageAlt": "Spylt landing page with 'Freaking delicious protein + caffeine' headline",
+        "imagePosition": "",
+        "preview": "",
+        "tech": ["Frontend Development"],
+        "features": ["Expressive display typography", "Layered product imagery", "Responsive layout"],
+        "liveUrl": "",
+        "githubUrl": "https://github.com/yash-199",
+        "githubLabel": "More on GitHub",
+        "accent": "#c27a3a"
+      }
+    ]
+  },
+  "journey": {
+    "eyebrow": "Experience & journey",
+    "title": "From intern to",
+    "accent": "engineer.",
+    "lead": "Three years of shipping production frontends — dashboards, booking systems, multilingual sites and the performance work behind them.",
+    "experience": [
+      {
+        "id": "asian",
+        "start": "Aug 2024",
+        "end": "",
+        "current": true,
+        "role": "Web Developer",
+        "company": "Asian Hospital",
+        "location": "Delhi/NCR",
+        "summary": "Building and optimising the hospital's digital platforms end-to-end — from booking flows to Core Web Vitals.",
+        "points": [
+          "Built the MERN-based Asian Labs Diagnostic Appointment System handling 150+ daily bookings with secure JWT auth and custom middleware.",
+          "Optimised APIs and MongoDB queries (indexes, lean queries, pagination), cutting response times and speeding up booking and test-listing pages.",
+          "Improved Core Web Vitals and Lighthouse scores with gzip, cache headers, smaller payloads, lazy loading and code splitting.",
+          "Revamped four hospital websites (WordPress + PHP + MySQL) with server-side caching and image/HTML optimisation."
+        ],
+        "projects": ["Asian Labs Booking System", "4 hospital websites"],
+        "tech": ["React", "Node.js", "Express", "MongoDB", "JWT", "WordPress"]
+      },
+      {
+        "id": "afs",
+        "start": "Oct 2022",
+        "end": "Aug 2024",
+        "current": false,
+        "role": "Frontend Developer",
+        "company": "All Friends Studio",
+        "location": "Gurugram",
+        "summary": "Shipped product UIs for clients across analytics, gaming, e-commerce and corporate web.",
+        "points": [
+          "Designed onWork.ai and delivered a React + Google Charts analytics dashboard processing 50K+ records, reducing reporting time by 60%.",
+          "Integrated OTP login and wallet management in a React gaming platform with Node.js, Express and JWT, improving retention by 20%.",
+          "Built a multilingual corporate website for US-based client DWFritz in three languages with React and Tailwind CSS.",
+          "Reduced bundle size and optimised components for an e-commerce platform, significantly lowering mobile bounce rate."
+        ],
+        "projects": ["onWork.ai", "DWFritz", "Gaming platform", "E-commerce UI"],
+        "tech": ["React", "Tailwind CSS", "Google Charts", "Node.js", "JWT"]
+      },
+      {
+        "id": "afs-intern",
+        "start": "Aug 2022",
+        "end": "Oct 2022",
+        "current": false,
+        "role": "Frontend Developer Intern",
+        "company": "All Friends Studio",
+        "location": "Gurugram",
+        "summary": "Where it started — performance tuning and SEO on real client projects.",
+        "points": [
+          "Improved site load times to under 3s for Farmscan Australia through React performance tuning.",
+          "Customised WordPress themes with SEO improvements, driving +18% organic traffic."
+        ],
+        "projects": ["Farmscan Australia"],
+        "tech": ["React", "WordPress", "SEO"]
+      }
+    ],
+    "milestones": [
+      { "id": "m1", "year": "2019 — 2022", "title": "Bachelor of Computer Applications (BCA)" },
+      { "id": "m2", "year": "2024 — Present", "title": "Master of Computer Applications (MCA) — Amity University" }
+    ],
+    "certifications": [
+      "Certified Web Developer from Scratch — Eduonix (2020)",
+      "Google Analytics for Beginners — Google Analytics Academy (2020)",
+      "CSS Beginner Skill Test (72%) — TechGig (2020)",
+      "Software Development Professional Training — Tech Explica (2021)",
+      "C++ Programming Workshop — World On Networks CodeCamp (2021)"
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "titleStart": "Have an Interesting",
+    "titleAccent": "Project",
+    "titleEnd": "in Mind?",
+    "lead": "Let's Build Something Amazing Together. I'm open to full-time roles and freelance projects.",
+    "email": "byash0720@gmail.com",
+    "phone": "+91-98734-72655",
+    "whatsappNumber": "919873472655",
+    "whatsappMessage": "Hello! Thank you for reaching out. How can I help you today regarding your project or job requirement?",
+    "topics": ["Full-time role", "Freelance project", "Collaboration", "Just saying hi"],
+    "socials": [
+      { "id": "linkedin", "icon": "linkedin", "label": "LinkedIn", "handle": "yashkumarjha-dev", "url": "https://www.linkedin.com/in/yashkumarjha-dev/" },
+      { "id": "github", "icon": "github", "label": "GitHub", "handle": "yash-199", "url": "https://github.com/yash-199" },
+      { "id": "instagram", "icon": "instagram", "label": "Instagram", "handle": "we.codedeveloper", "url": "https://www.instagram.com/we.codedeveloper?igsh=bXZqcWlwZTQ1Mjc3" }
+    ]
+  },
+  "footer": {
+    "taglineStart": "From concept to",
+    "taglineAccent": "creation",
+    "taglineEnd": "— let's make it happen.",
+    "availability": "Available for full-time roles & freelance projects",
+    "wordmark": "YASH JHA"
+  }
+}

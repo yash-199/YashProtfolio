@@ -1,131 +1,108 @@
-import React from "react";
-import { FaInstagram } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import { ArrowUp } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
+import logo from "../assets/logo.webp";
+import { useContent } from "../cms/context";
+import { getIcon, resolveAsset, socialIcons } from "../data/registry";
+import { navLinks, whatsappUrl } from "../data/selectors";
+import { useScrollTo } from "../hooks/useScrollTo";
 
 const Footer = () => {
-    const socialLinks = [
-        {
-            icon: FaInstagram,
-            url: "https://www.instagram.com/we.codedeveloper?igsh=bXZqcWlwZTQ1Mjc3",
-        },
-        {
-            icon: IoLogoGithub,
-            url: "https://github.com/yash-199/",
-        },
-        {
-            icon: FaLinkedin,
-            url: "https://www.linkedin.com/in/yashkumarjha-dev/",
-        },
-    ];
-    return (
-        <section className="max-w-[80rem] mx-auto text-white py-20">
-            {/* Top Section */}
-            <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+  const { profile, contact, footer } = useContent();
+  const resume = resolveAsset(profile.resume);
+  const scrollTo = useScrollTo();
 
-                {/* Heading */}
-                <div className="w-full md:w-[70%] space-y-4 px-4">
-                    <h1 className="lg:text-[6rem] md:text-[8rem] text-[2rem] font-extrabold leading-[0.8]">
-                        Follow Me
-                    </h1>
-                    <p className="text-xl md:text-2xl text-gray-300">
-                        Stay tuned for the latest design trends <br /> and development insights!
-                    </p>
-                </div>
+  return (
+    <footer className="relative overflow-hidden border-t border-white/[0.06] pt-20">
+      <div className="container-x">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+          <div>
+            <img src={logo} alt="" width="56" height="56" loading="lazy" className="h-14 w-14" />
+            <p className="mt-6 max-w-sm text-2xl font-light leading-snug text-paper/90">
+              {footer.taglineStart} <span className="font-serif italic text-ember-soft">{footer.taglineAccent}</span> {footer.taglineEnd}
+            </p>
+            {profile.available && footer.availability && (
+              <div className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 px-4 py-2 text-sm text-paper/80">
+                <span className="h-2 w-2 rounded-full bg-[#34d399]" aria-hidden="true" />
+                {footer.availability}
+              </div>
+            )}
+          </div>
 
-                {/* Social Icons */}
-                <div className="flex w-full md:w-[30%] justify-center items-center gap-6 md:gap-10">
-                    {socialLinks.map(({ icon: Icon, url }, i) => (
-                        <a
-                            key={i}
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="social link"
-                        >
-                            <Icon className="text-5xl md:text-6xl cursor-pointer border border-white/40 p-3 rounded-xl hover:bg-white hover:text-black transition duration-200" />
-                        </a>
-                    ))}
-                </div>
-            </div>
+          <nav aria-label="Footer">
+            <p className="eyebrow mb-5">Navigate</p>
+            <ul className="space-y-3">
+              {navLinks.map((l) => (
+                <li key={l.id}>
+                  <a href={`#${l.id}`} onClick={(e) => scrollTo(l.id, e)} className="text-paper/70 transition-colors hover:text-ember">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+              {resume && (
+                <li>
+                  <a href={resume} target="_blank" rel="noopener noreferrer" className="text-paper/70 transition-colors hover:text-ember">
+                    Resume
+                  </a>
+                </li>
+              )}
+            </ul>
+          </nav>
 
-            <hr className="border-white/20 my-12" />
-
-            {/* Middle Branding Section */}
-            <div className="text-center">
-                <img src={logo} className="mx-auto w-40 opacity-90" />
-
-                <h1 className="text-4xl md:text-5xl font-light py-2">
-                    FROM CONCEPT TO <b>CREATION</b>
-                </h1>
-                <h1 className="text-4xl md:text-5xl font-light py-2">
-                    LET'S MAKE IT <b>HAPPEN!</b>
-                </h1>
-
-                {/* Circular Badge */}
-                <div className="relative w-[110px] h-[110px] mx-auto my-10">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="spin-slow rounded-full bg-black border-blue-500 border-4">
-                            <svg
-                                fill="black"
-                                viewBox="0 0 100 100"
-                                className="w-full h-full text-white"
-                            >
-                                <path
-                                    id="circlePath"
-                                    d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                                    fill="transparent"
-                                ></path>
-                                <text fontSize="11" letterSpacing="4px" fill="white">
-                                    <textPath href="#circlePath">
-                                        OPEN TO WORK · OPEN TO WORK · OPEN TO WORK ·
-                                    </textPath>
-                                </text>
-                            </svg>
-                        </div>
-                    </div>
-
-                    {/* Arrow Icon */}
-                    <svg
-                        className="absolute top-1/2 left-1/2 w-7 h-7 -translate-x-1/2 -translate-y-1/2 rotate-45 text-white  opacity-80"
-                        viewBox="0 0 24 24"
-                    >
-                        <path d="M12 1C12 1 12 8 10 10C8 12 1 12 1 12C1 12 8 12 10 14C12 16 12 23 12 23C12 23 12 16 14 14C16 12 23 12 23 12C23 12 16 12 14 10C12 8 12 1 12 1Z"></path>
-                    </svg>
-                </div>
-
-                {/* Button */}
-                <button className="bg-white/10 px-8 py-3 rounded-full hover:bg-white hover:text-black transition duration-200">
-                    <a href="https://wa.me/919873472655?text=Hello%21%20Thank%20you%20for%20reaching%20out.%20How%20can%20I%20help%20you%20today%20regarding%20your%20project%20or%20job%20requirement%3F" className="bg-transparent">
-                        Get In Touch
+          <div>
+            <p className="eyebrow mb-5">Connect</p>
+            <ul className="space-y-3">
+              {contact.socials.filter((s) => s.url).map((s, i) => {
+                const Icon = getIcon(socialIcons, s.icon);
+                return (
+                  <li key={s.id ?? i}>
+                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 text-paper/70 transition-colors hover:text-paper">
+                      <Icon className="h-4 w-4 transition-colors group-hover:text-ember" aria-hidden="true" /> {s.label}
                     </a>
-                </button>
+                  </li>
+                );
+              })}
+              {contact.email && (
+                <li>
+                  <a href={`mailto:${contact.email}`} className="break-all text-paper/70 transition-colors hover:text-paper">
+                    {contact.email}
+                  </a>
+                </li>
+              )}
+            </ul>
+          </div>
+        </div>
 
-                {/* Bottom Text */}
-                <div className="mt-6">
-                    <p className="text-2xl font-bold">
-                        I'm available for full-time roles & freelance projects.
-                    </p>
-                    <p className="text-lg text-gray-400 mt-2">
-                        I love crafting dynamic web applications <br /> and delivering seamless user experiences.
-                    </p>
-                </div>
-            </div>
-            <div className="fixed w-full right-0 bottom-0 flex justify-end pr-10 cursor-pointer bg-transparent">
-                <a className="bg-transparent" href="https://wa.me/919873472655?text=Hello%21%20Thank%20you%20for%20reaching%20out.%20How%20can%20I%20help%20you%20today%20regarding%20your%20project%20or%20job%20requirement%3F"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <div className="bg-green-500 p-2 rounded-full mb-4 shadow-lg hover:scale-110 transition-transform duration-300">
-                        <FaWhatsapp className="text-4xl text-white bg-transparent" />
-                    </div>
-                </a>
-            </div>
+        <div className="mt-16 flex flex-col-reverse items-start justify-between gap-6 border-t border-white/[0.06] py-8 text-sm text-muted sm:flex-row sm:items-center">
+          <p>© {new Date().getFullYear()} {profile.fullName}. Designed & built with React, Tailwind CSS & Framer Motion.</p>
+          <a
+            href="#top"
+            onClick={(e) => scrollTo("top", e)}
+            className="group inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-paper/80 transition-colors hover:border-ember hover:text-ember"
+          >
+            Back to top <ArrowUp className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
 
-        </section>
-    );
+      {/* Oversized outlined wordmark */}
+      <p aria-hidden="true" className="text-outline pointer-events-none select-none whitespace-nowrap text-center text-[23vw] font-semibold leading-[0.75] tracking-tightest">
+        {footer.wordmark}
+      </p>
+
+      {/* Floating WhatsApp shortcut (kept from previous version) */}
+      {contact.whatsappNumber && (
+        <a
+          href={whatsappUrl(contact)}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="dock-aware-right fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-white shadow-[0_10px_40px_-8px_rgba(37,211,102,0.6)] transition-transform duration-300 hover:scale-110 sm:bottom-8 sm:right-8"
+        >
+          <FaWhatsapp className="h-7 w-7" aria-hidden="true" />
+        </a>
+      )}
+    </footer>
+  );
 };
 
 export default Footer;

@@ -1,35 +1,35 @@
-import React from 'react';
+import { useContent } from "../cms/context";
 
-const slideText = [
-  "Responsive", "Dynamic", "Scalable", "Interactive",
-  "Secure", "Reliable", "Engaging", "Accessible", "UI/UX",
-  "Responsive", "Dynamic", "Scalable", "Interactive",
-  "Secure", "Reliable", "Engaging", "Accessible", "UI/UX"
-];
+const Star = () => (
+  <svg aria-hidden="true" className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 1C12 1 12 8 10 10C8 12 1 12 1 12C1 12 8 12 10 14C12 16 12 23 12 23C12 23 12 16 14 14C16 12 23 12 23 12C23 12 16 12 14 10C12 8 12 1 12 1Z" />
+  </svg>
+);
 
+const Track = ({ hidden, marqueeWords }) => (
+  <div aria-hidden={hidden} className="flex shrink-0 animate-marquee items-center gap-8 pr-8 group-hover:[animation-play-state:paused]">
+    {[...marqueeWords, ...marqueeWords].map((word, i) => (
+      <span key={`${word}-${i}`} className="inline-flex items-center gap-8">
+        <span className={i % 2 ? "font-serif text-2xl italic sm:text-4xl" : "text-2xl font-medium uppercase tracking-tight sm:text-4xl"}>
+          {word}
+        </span>
+        <Star />
+      </span>
+    ))}
+  </div>
+);
+
+/** Crossed marquee bands — a nod to the previous design, refined. */
 const CrossText = () => {
+  const { marqueeWords } = useContent();
+  if (!marqueeWords.length) return null;
   return (
-    <div className="relative -top-24 text-white py-20 overflow-hidden">
-      {/* Slanted background strip */}
-      <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 rotate-6 bg-gradient-to-r from-[#6799fe] to-[#0a255b] py-6 opacity-60 md:rotate-3 lg:py-10" />
-
-      {/* Foreground text strip */}
-      <div className="relative flex flex-wrap justify-between gap-4 bg-gradient-to-r from-[#6799fe] to-[#0255fb] -rotate-2 px-8 py-6">
-        <div className="group bg-transparent flex overflow-hidden p-2 [--duration:50s] [--gap:1rem] [gap:var(--gap)] flex-row [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div className="flex bg-transparent shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
-            {slideText.map((item, index) => (
-              <div key={index} className='bg-transparent inline-flex items-center gap-2.5'>
-                <span
-
-                  className="text-nowrap font-instrument-serif font-semibold text-gray-50 text-sm uppercase leading-6 tracking-wider md:text-lg lg:text-xl bg-transparent"
-                >
-                  {item}
-                </span>
-                <svg className='bg-transparent' fill="#fffff5" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><title>Star</title><path d="M12 1C12 1 12 8 10 10C8 12 1 12 1 12C1 12 8 12 10 14C12 16 12 23 12 23C12 23 12 16 14 14C16 12 23 12 23 12C23 12 16 12 14 10C12 8 12 1 12 1Z" fill="#fffff5"></path></svg>
-              </div>
-
-            ))}
-          </div>
+    <div className="relative overflow-hidden py-16 sm:py-24" role="img" aria-label={marqueeWords.join(", ")}>
+      <div aria-hidden="true" className="absolute inset-x-[-5%] top-1/2 h-14 -translate-y-1/2 rotate-[4deg] bg-gradient-to-r from-iris/40 via-iris/25 to-ember/30 sm:h-20" />
+      <div className="group relative -rotate-2 bg-ember py-4 text-ink [--duration:45s] [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] sm:py-5">
+        <div className="flex w-max">
+          <Track hidden marqueeWords={marqueeWords} />
+          <Track hidden marqueeWords={marqueeWords} />
         </div>
       </div>
     </div>
